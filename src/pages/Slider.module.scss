@@ -1,0 +1,38 @@
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.swiper-container {
+  transition: all 0.6s ease-in-out;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 2rem;
+  margin-bottom: 4rem;
+  div {
+    background-color: #007aff;
+    width: 100%;
+    height: 0.2rem;
+    border-radius: 2rem;
+  }
+}
+.titles {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+@media (width < 800px) {
+  .slider-img {
+    width: 100%;
+    height: 100%;
+  }
+  .wrapper {
+    flex-direction: column;
+    row-gap: 2.5rem;
+  }
+}

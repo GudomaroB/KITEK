@@ -1,0 +1,44 @@
+.fullscreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.fullscreenImage {
+  max-width: 100%; /* Максимальная ширина изображения */
+  max-height: 100%; /* Максимальная высота изображения */
+}
+
+:global {
+  .swiper-pagination-bullet {
+    width: 2rem;
+    height: 2rem;
+    background-color: #4174ba;
+    opacity: 1;
+    margin: 0.5rem;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: gray;
+  }
+  .swiper {
+    margin-bottom: 2rem;
+  }
+  .swiper-wrapper {
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+  }
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    z-index: 1000;
+  }
+}

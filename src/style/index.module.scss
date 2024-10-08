@@ -1,0 +1,32 @@
+@import "./variables.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  ::-webkit-scrollbar {
+    display: none; /* Скрывает полосу прокрутки в браузерах на основе WebKit */
+  }
+}
+body {
+  @include body;
+  ::selection {
+    color: $color-white; /* Цвет текста при выделении */
+    background-color: #4174ba;
+  }
+}
+a {
+  color: $color-white;
+  text-decoration: none;
+}
+button {
+  @include buttons;
+}
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0rem 1.5rem;
+}

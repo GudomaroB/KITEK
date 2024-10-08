@@ -1,0 +1,122 @@
+@import "../style/variables.scss";
+.modal-content {
+  padding: 3rem 2rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  width: 76.4rem;
+  background-color: #eeeeee;
+  border-radius: 0.8rem; // Радиус скругления углов
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Тень
+  transition: box-shadow 0.3s ease; // Плавный переход для тени
+  &:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); // Увеличенная тень при наведении
+  }
+}
+.close-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3.5rem;
+  font-weight: $fw-600;
+  color: #4174ba;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7rem;
+    height: 7rem;
+    transform: translate(-50%, -50%);
+    // background-color: #5082c95d;
+  }
+}
+.modal__images {
+  margin: 0 auto;
+}
+
+//
+.modal-contents {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+
+  h2 {
+    font-size: 24px;
+
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .signature {
+    margin-top: 20px;
+    text-align: right;
+    font-style: italic;
+    font-size: 16px;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 150;
+  background-color: #0000009f;
+}
+
+@media (width < 800px) {
+  .modal-content {
+    width: 90%;
+  }
+  .modal__images {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (width < 500px) {
+  .modal-contents {
+    padding: 0;
+  }
+  //   .modal-content {
+  //     padding: 2rem 1.5rem;
+  //     height: 50rem;
+  //     overflow-y: scroll;
+  //   }
+  .modal-content {
+    padding: 2rem 1.5rem;
+    height: 50rem;
+    overflow-y: scroll;
+    scrollbar-width: thin; /* Для Firefox */
+    scrollbar-color: #4174ba #f1f1f1; /* Цвет скролла и фона */
+  }
+
+  /* Для Chrome, Safari и Edge */
+  .modal-content::-webkit-scrollbar {
+    width: 8px; /* Ширина скроллбара */
+  }
+
+  .modal-content::-webkit-scrollbar-track {
+    background: #fd0000; /* Цвет фона скроллбара */
+  }
+
+  .modal-content::-webkit-scrollbar-thumb {
+    background: #00f76f; /* Цвет самого скролла */
+    border-radius: 10px; /* Скругление углов скролла */
+  }
+
+  .modal-content::-webkit-scrollbar-thumb:hover {
+    background: #ce2e2e; /* Цвет скролла при наведении */
+  }
+}

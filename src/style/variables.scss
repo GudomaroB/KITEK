@@ -1,0 +1,62 @@
+// шрифты
+$family-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+// цвета
+$color-black: #222;
+$color-white: #fff;
+$color-pur: #8c7dcf;
+
+// жирность шрифта
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+$fw-800: 800;
+$fw-900: 900;
+
+// размер шрифта
+$fz10-px: 1rem;
+$fz12-px: 1.2rem;
+$fz14-px: 1.4rem;
+$fz16-px: 1.6rem;
+$fz18-px: 1.8rem;
+$fz20-px: 2rem;
+$fz25-px: 2.5rem;
+// миксины
+@mixin buttons {
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: transparent;
+}
+@mixin body {
+  font-family: $family-font;
+  font-weight: $fw-500;
+  font-size: 2rem;
+}
+
+@mixin click {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    height: 6.5rem;
+    // background-color: rgba(255, 0, 0, 0.363);  // радиус нажатия
+  }
+}
+
+@mixin click1 {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    height: 100%;
+    // background-color: rgba(0, 0, 255, 0.432); // радиус нажатия
+  }
+}

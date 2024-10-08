@@ -1,0 +1,110 @@
+@import "../style/variables.scss";
+
+.accordion {
+  margin: 1rem 0;
+  margin-bottom: 3rem;
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+.accordion-header {
+  background-color: #4174ba;
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  color: $color-white;
+  height: 7rem;
+  border-radius: 0.4rem;
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+
+.accordion-header.header-open {
+  background-color: $color-black;
+  color: $color-white;
+}
+
+.accordion-icon {
+  margin-right: 1.5rem;
+}
+
+.accordion-icon.icon-open {
+  transform: rotate(90deg) scale(1.3); // Поворот и увеличение иконки
+}
+
+.accordion-content {
+  padding: 0.5rem 1.5rem;
+  background-color: #fff;
+  border-top: 0.1rem solid #ddd;
+  transition: all 0.3s ease-in-out;
+}
+.accords {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ddd {
+  ul {
+    list-style: none;
+    li {
+      position: relative;
+      font-size: 1.8rem;
+      line-height: 3.5rem;
+      padding-left: 2rem;
+      &::before {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        background-color: #4174ba;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: -1rem;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+}
+
+@media (width < 900px) {
+  .accordion-header {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    border-radius: 2rem 0 2rem 0rem;
+  }
+  .ddd {
+    grid-template-columns: repeat(1, 1fr);
+    ul {
+      li {
+        font-size: 1.7rem;
+        line-height: 3rem;
+        padding-left: 1.5rem;
+        &::before {
+          content: "";
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+  }
+  .accordion-content {
+    padding-top: 0.1rem;
+  }
+  .accordion {
+    h3 {
+      line-height: 2rem;
+      font-size: 1.7rem;
+      height: 8rem;
+      font-weight: 400;
+      padding: 0.5rem 2rem;
+    }
+  }
+}

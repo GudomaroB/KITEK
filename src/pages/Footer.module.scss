@@ -1,0 +1,86 @@
+@import "../style/variables.scss";
+.footer {
+  background-color: $color-black;
+  background-color: #0a3e75;
+
+  padding: 2rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__addres {
+    flex: 1;
+    color: $color-white;
+
+    p {
+      line-height: 2rem;
+      font-size: 1.5rem;
+      font-style: normal;
+      max-width: 42rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-style: normal;
+    }
+  }
+  .logo {
+    padding: 1rem 2rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    row-gap: 1rem;
+    color: $color-white;
+    flex: 1;
+    div {
+      display: flex;
+      align-items: center;
+      column-gap: 2rem;
+      font-size: 2.5rem;
+      &:hover {
+        color: $color-pur;
+      }
+    }
+    a {
+      font-size: 2rem;
+      transition: hover 0.2s ease-in-out;
+      font-weight: $fw-500;
+      &:hover {
+        color: $color-pur;
+      }
+    }
+  }
+}
+
+@media (width < 1130px) {
+  .footer {
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+
+    &__addres {
+      text-align: center;
+    }
+  }
+}
+@media (width < 500px) {
+  .footer {
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+    &__addres {
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+      }
+    }
+  }
+}
